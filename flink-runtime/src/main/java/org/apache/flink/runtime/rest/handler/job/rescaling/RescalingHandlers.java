@@ -80,7 +80,7 @@ public class RescalingHandlers extends AbstractAsynchronousOperationHandlers<Asy
 			final CompletableFuture<Acknowledge> rescalingFuture = gateway.rescaleJob(
 				jobId,
 				newParallelism,
-				RescalingBehaviour.STRICT,
+				RescalingBehaviour.RELAXED,
 				RpcUtils.INF_TIMEOUT);
 
 			return rescalingFuture;
